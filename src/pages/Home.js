@@ -1,64 +1,113 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/shopContext";
+import { Container, Card, Row, Col } from "reactstrap";
 import Hero from "../components/Hero";
-import { Box, Grid, Center } from "@chakra-ui/react";
+import { FaMoneyBill, FaTree } from "react-icons/fa";
+import { MdPerson } from "react-icons/md";
+import { Box, Grid, Center, Image, Text, Button } from "@chakra-ui/react";
 
 const Home = () => {
-	const { fetchAllProducts, products } = useContext(ShopContext);
+	const {
+		fetchAllProducts,
+		products,
+		fetchCollections,
+		collections,
+		fetchHomeCollection,
+		homeCollection
+	} = useContext(ShopContext);
 
-	useEffect(() => {
-		fetchAllProducts();
-	}, [fetchAllProducts]);
+	useEffect(
+		() => {
+			fetchAllProducts();
+			fetchCollections();
+			fetchHomeCollection();
+		},
+		[fetchCollections],
+		[fetchAllProducts],
+		[fetchHomeCollection]
+	);
 
 	if (!products) return <div>Loading...</div>;
 
 	console.log(products);
+	console.log(homeCollection.products);
 
 	return (
 		<div>
 			<Hero />
-			<Box h="220px" background="#050d01">
-				<Grid gridTemplateColumns="repeat(3, 1fr)" gap={6}>
-					<Box>
-						<Center h="220px">
-							<h2
-								style={{
-									color: "white",
-									fontSize: "2.5rem",
-									"font-family": "Poppins",
-									"font-weight": "bold"
-								}}>
-								100% Vegan
-							</h2>
-						</Center>
-					</Box>
-					<Box>
-						<Center h="220px">
-							<h2
-								style={{
-									color: "white",
-									fontSize: "2.5rem",
-									"font-family": "Poppins",
-									"font-weight": "bold"
-								}}>
-								All Natural Ingredients
-							</h2>
-						</Center>
-					</Box>
-					<Box>
-						<Center h="220px">
-							<h2
-								style={{
-									color: "white",
-									fontSize: "2.5rem",
-									"font-family": "Poppins",
-									"font-weight": "bold"
-								}}>
-								Made With Essential Oils
-							</h2>
-						</Center>
-					</Box>
+			<Box p="20px" background="#050d01">
+				<Grid
+					justifyContent="center"
+					textAlign="center"
+					templateColumns="repeat(3,1fr)">
+					<Center>
+						<FaMoneyBill color="white" size="2em" />
+					</Center>
+					<Center>
+						<FaTree color="white" size="2em" />
+					</Center>
+					<Center>
+						<MdPerson color="white" size="2em" />
+					</Center>
+				</Grid>
+				<Grid textAlign="center" templateColumns="repeat(3,1fr)">
+					<Text
+						fontSize="1.5rem"
+						color="white"
+						fontWeight="800"
+						marginTop="20px">
+						Hassle Free Returns
+					</Text>
+					<Text
+						fontSize="1.5rem"
+						color="white"
+						fontWeight="800"
+						marginTop="20px">
+						All Products Are Eco-Friendly
+					</Text>
+					<Text
+						fontSize="1.5rem"
+						color="white"
+						fontWeight="800"
+						marginTop="20px">
+						Great Customer Service
+					</Text>
+				</Grid>
+				<Grid textAlign="center" templateColumns="repeat(3,1fr)">
+					<Text
+						textTransform="capitalize"
+						fontSize=".75rem"
+						paddingRight="20px"
+						paddingLeft="20px"
+						color="white"
+						fontWeight="500"
+						marginTop="5px">
+						if you're not 200% satsified, dont't worry, get your money
+						back
+					</Text>
+					<Text
+						textTransform="capitalize"
+						fontSize=".75rem"
+						paddingRight="20px"
+						paddingLeft="20px"
+						color="white"
+						fontWeight="500"
+						marginTop="5px">
+						so that you can feel guilt-free doing your part to keep our
+						earth clean
+					</Text>
+					<Text
+						textTransform="capitalize"
+						fontSize=".75rem"
+						paddingRight="20px"
+						paddingLeft="20px"
+						color="white"
+						fontWeight="500"
+						marginTop="5px">
+						do you have a problem with your order? don't worry, let us
+						know
+					</Text>
 				</Grid>
 			</Box>
 			<Box textAlign="center">
@@ -66,12 +115,45 @@ const Home = () => {
 					Latest Products
 				</h1>
 			</Box>
-			<Grid gridTemplateColumns="repeat(3, 1fr)" gap={6}>
-				{products.map((product) => 
-					<div className="card">
-                        
-                    </div>
-				)}
+			<Grid textAlign="center" templateColumns="repeat(3, 1fr)">
+				{homeCollection.products.map((product) => (
+					<Link to={`/products/${product.handle}`} key={product.id}>
+						<Box
+						className="container-box"
+							maxW="sm"
+							height=""
+							margin="10px"
+							borderWidth="1px"
+							borderRadius="lg"
+							overflow="hidden"
+							textAlign="center"
+							position="relative">
+							<Image
+								src={product.images[0].src}
+							/>
+							<div className="overlay">
+								<Text
+									paddingTop="40%"
+									textAlign="center"
+									w="100%"
+									color="white"
+									fontSize="1.5rem"
+									fontWeight="bolder">
+									{product.title} 
+								</Text>
+								<Text
+
+									textAlign="center"
+									w="100%"
+									fontWeight="800"
+									fontSize="1rem"
+									color="white">
+									${product.variants[0].price}
+								</Text>
+							</div>
+						</Box>
+					</Link>
+				))}
 			</Grid>
 		</div>
 	);

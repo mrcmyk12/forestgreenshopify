@@ -13,6 +13,8 @@ export class ShopProvider extends Component{
         product: {},
         products: [],
         checkout: {},
+        homeCollection: [],
+        collections:[],
         isCartOpen: false,
         isMenuOpen: false
     };
@@ -61,11 +63,26 @@ export class ShopProvider extends Component{
         console.log(products);
     };
 
+    fetchCollections = async () => {
+        const collections = await client.collection.fetchAllWithProducts();
+        this.setState({ collections: collections });
+        console.log(collections);
+    };
+
+    fetchHomeCollection = async () => {
+        const collectionId = "gid://shopify/Collection/388849533185"
+
+        const homeCollection = await client.collection.fetchWithProducts(collectionId, {productsFirst: 3});
+        this.setState({ homeCollection: homeCollection })
+    }
+
     fetchProductWithHandle = async (handle) => {
         const product = await client.product.fetchByHandle(handle);
         this.setState({ product: product })
         console.log(product);
     };
+
+    
 
     closeCart = () => {this.setState({ isCartOpen: false})};
 
@@ -81,6 +98,8 @@ export class ShopProvider extends Component{
                 value={{
                     ...this.state,
                     fetchAllProducts: this.fetchAllProducts,
+                    fetchHomeCollection: this.fetchHomeCollection,
+                    fetchCollections: this.fetchCollections,
                     fetchProductWithHandle: this.fetchProductWithHandle,
                     addItemtoCheckout: this.addItemtoCheckout,
                     removeLineItem: this.removeLineItem,

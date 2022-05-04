@@ -17,19 +17,19 @@ import {
 const NavBar = () => {
 	return (
 		<div>
-			<Navbar className="custom-navbar" expand="md">
+			<Navbar className="custom-navbar" expand="md" fixed="top" dark>
 				<NavbarBrand><h3>Forest Green</h3></NavbarBrand>
 				<NavbarToggler onClick={function noRefCheck() {}} />
 				<Collapse navbar>
 					<Nav style={{ width: "75%" }} className="mr-auto" navbar>
 						<NavItem href="">
-							<NavLink className="nav-text">Bath Bombs</NavLink>
+							<NavLink className="nav-text" style={{"color":"white"}}>Bamboo Collection</NavLink>
 						</NavItem>
 						<NavItem href="">
-							<NavLink className="nav-text">Soaps</NavLink>
+							<NavLink className="nav-text" style={{"color":"white"}}>Home Essentials</NavLink>
 						</NavItem>
 						<NavItem href="">
-							<NavLink className="nav-text">Bundles</NavLink>
+							<NavLink className="nav-text" style={{"color":"white"}}>Grocery Collection</NavLink>
 						</NavItem>
 					</Nav>
 					<InputGroup style={{ border: "none", width: "35%" }}>
