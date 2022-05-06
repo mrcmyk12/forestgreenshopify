@@ -18,7 +18,7 @@ const NavBar = () => {
 	return (
 		<div>
 			<Navbar className="custom-navbar" expand="md" fixed="top" dark>
-				<NavbarBrand><h3>Forest Green</h3></NavbarBrand>
+				<NavbarBrand href="/"><h3>Forest Green</h3></NavbarBrand>
 				<NavbarToggler onClick={function noRefCheck() {}} />
 				<Collapse navbar>
 					<Nav style={{ width: "75%" }} className="mr-auto" navbar>

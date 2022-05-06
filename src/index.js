@@ -7,6 +7,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import ShopProvider from "./context/shopContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
 	<React.StrictMode>
 		<ChakraProvider>

@@ -117,6 +117,6 @@ export class ShopProvider extends Component{
 
 const ShopConsumer = ShopContext.Consumer;
 
-export {ShopConsumer, ShopContext };
+export { ShopConsumer, ShopContext };
 
 export default ShopProvider

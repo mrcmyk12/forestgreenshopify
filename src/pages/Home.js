@@ -1,37 +1,23 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/shopContext";
-import { Container, Card, Row, Col } from "reactstrap";
+import{Row,Col} from 'reactstrap'
 import Hero from "../components/Hero";
 import { FaMoneyBill, FaTree } from "react-icons/fa";
 import { MdPerson } from "react-icons/md";
 import { Box, Grid, Center, Image, Text, Button } from "@chakra-ui/react";
 
 const Home = () => {
-	const {
-		fetchAllProducts,
-		products,
-		fetchCollections,
-		collections,
-		fetchHomeCollection,
-		homeCollection
-	} = useContext(ShopContext);
+	const { fetchHomeCollection, homeCollection } =
+		useContext(ShopContext);
 
-	useEffect(
-		() => {
-			fetchAllProducts();
-			fetchCollections();
-			fetchHomeCollection();
-		},
-		[fetchCollections],
-		[fetchAllProducts],
-		[fetchHomeCollection]
-	);
+	useEffect(() => {
+		fetchHomeCollection()
+	},[fetchHomeCollection]);
 
-	if (!products) return <div>Loading...</div>;
-
-	console.log(products);
 	console.log(homeCollection.products);
+
+	if(!homeCollection) return <div><h3 style={{color:"black"}}>We Dont Have Anything</h3></div>
 
 	return (
 		<div>
@@ -119,7 +105,7 @@ const Home = () => {
 				{homeCollection.products.map((product) => (
 					<Link to={`/products/${product.handle}`} key={product.id}>
 						<Box
-						className="container-box"
+							className="container-box"
 							maxW="sm"
 							height=""
 							margin="10px"
@@ -128,9 +114,7 @@ const Home = () => {
 							overflow="hidden"
 							textAlign="center"
 							position="relative">
-							<Image
-								src={product.images[0].src}
-							/>
+							<Image src={product.images[0].src} />
 							<div className="overlay">
 								<Text
 									paddingTop="40%"
@@ -139,10 +123,9 @@ const Home = () => {
 									color="white"
 									fontSize="1.5rem"
 									fontWeight="bolder">
-									{product.title} 
+									{product.title}
 								</Text>
 								<Text
-
 									textAlign="center"
 									w="100%"
 									fontWeight="800"
@@ -156,6 +139,7 @@ const Home = () => {
 				))}
 			</Grid>
 		</div>
+		
 	);
 };
 
