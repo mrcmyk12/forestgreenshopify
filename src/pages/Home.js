@@ -8,16 +8,16 @@ import { MdPerson } from "react-icons/md";
 import { Box, Grid, Center, Image, Text, Button } from "@chakra-ui/react";
 
 const Home = () => {
-	const { fetchHomeCollection, homeCollection } =
+	const { fetchAllProducts, products, fetchCollections, collections, fetchBambooCollection, bambooCollection } =
 		useContext(ShopContext);
 
 	useEffect(() => {
-		fetchHomeCollection()
-	},[fetchHomeCollection]);
+		fetchAllProducts(); fetchCollections(); fetchBambooCollection();
+	},[fetchAllProducts, fetchCollections, fetchBambooCollection]);
 
-	console.log(homeCollection.products);
-
-	if(!homeCollection) return <div><h3 style={{color:"black"}}>We Dont Have Anything</h3></div>
+	console.log(products)
+	console.log(bambooCollection)
+	if(!products) return <div><h3 style={{color:"black"}}>We Dont Have Anything</h3></div>
 
 	return (
 		<div>
@@ -102,7 +102,7 @@ const Home = () => {
 				</h1>
 			</Box>
 			<Grid textAlign="center" templateColumns="repeat(3, 1fr)">
-				{homeCollection.products.map((product) => (
+				{products.map((product) => (
 					<Link to={`/products/${product.handle}`} key={product.id}>
 						<Box
 							className="container-box"

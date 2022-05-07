@@ -101,6 +101,8 @@ h3{
   text-transform: uppercase;
   height: 54px;
   border-radius: 8px;
+  background: var(--brand-forest-green);
+  color: white;
 }
 
 .brand-button-secondary{

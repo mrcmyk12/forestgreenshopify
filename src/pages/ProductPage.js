@@ -13,7 +13,7 @@ import { Image } from "@chakra-ui/react";
 const ProductPage = () => {
 	const { handle } = useParams();
 
-	const { fetchProductWithHandle, addItemCheckout, product } =
+	const { fetchProductWithHandle, addItemtoCheckout, product } =
 		useContext(ShopContext);
 
 	useEffect(() => {
@@ -26,6 +26,7 @@ const ProductPage = () => {
 	let [image, setImage] = useState();
 	let [title, setTitle] = useState();
 	let [quantity, setQuantity] = useState(1);
+    let [cartProduct, setCartProduct] = useState();
 
 	if (!product.title) return <div>Loading...</div>;
 
@@ -87,6 +88,7 @@ const ProductPage = () => {
 										onClick={() => {
 											setImage(variant.image.src);
 											setTitle(variant.title);
+                                            setCartProduct(variant.id);
 										}}>
 										<img
 											className="thumbnail-image"
@@ -108,12 +110,12 @@ const ProductPage = () => {
 							<Button
 								onClick={() => setQuantity(quantity - 1)}
 								className="brand-button-secondary"
-								style={{ width: "100%" }}>
+								style={{ width: "100%",height:"40px" }}>
 								-
 							</Button>
 						</Col>
 						<Col>
-							<p style={{ color: "white" }} className="h3">
+							<p style={{ color: "white", justifyContent:"center", lineHeight:"40px"}} className="h3">
 								{quantity}
 							</p>
 						</Col>
@@ -121,12 +123,12 @@ const ProductPage = () => {
 							<Button
 								onClick={() => setQuantity(quantity + 1)}
 								className="brand-button-secondary"
-								style={{ width: "100%" }}>
+								style={{ width: "100%", height:"40px" }}>
 								+
 							</Button>
 						</Col>
 						<Col sm="6">
-							<Button style={{}} className="brand-button-secondary">
+							<Button onClick={() => { addItemtoCheckout(cartProduct, quantity); console.log(cartProduct, quantity)}} style={{ height:"40px"}} className="brand-button-secondary">
 								Add To Cart
 							</Button>
 						</Col>
