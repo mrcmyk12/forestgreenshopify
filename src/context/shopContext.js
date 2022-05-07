@@ -14,7 +14,7 @@ class ShopProvider extends Component {
 		products: [],
 		checkout: {},
 		homeCollection: [],
-		bambooCollection: [],
+		bambooCollection: {},
 		collections: [],
 		isCartOpen: false,
 		isMenuOpen: false
