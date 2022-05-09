@@ -38,6 +38,7 @@ const ProductPage = () => {
 				style={{
 					width: "100%",
 					padding: "0",
+					paddingTop:"60px",
 					background: "black"
 				}}>
 				<Col sm="6" style={{ padding: "0" }}>
@@ -82,7 +83,7 @@ const ProductPage = () => {
 					<Row style={{ marginTop: "15px" }}>
 						{product.variants.map((variant) => {
 							return (
-								<Col style={{ marginTop: "15px" }} xs="4" sm="2">
+								<Col style={{ paddingTop: "25px" }} xs="4" sm="2">
 									<div
 										key={variant.id}
 										className="container-box"
@@ -93,6 +94,7 @@ const ProductPage = () => {
 										}}>
 										<img
 											className="thumbnail-image"
+											style={{paddingTop:"25px"}}
 											src={variant.image.src}
 										/>
 										<div className="variant-overlay"></div>
