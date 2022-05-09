@@ -40,10 +40,10 @@ const ProductPage = () => {
 					padding: "0",
 					background: "black"
 				}}>
-				<Col style={{ padding: "0" }}>
+				<Col sm="6" style={{ padding: "0" }}>
 					<Image
 						src={image}
-						boxSize="85vh"
+						
 						width="100%"
 						objectFit="fill"
 					/>
@@ -52,12 +52,13 @@ const ProductPage = () => {
 					</div>
 				</Col>
 				<Col
+					sm="6"
 					style={{
 						background: "#050d01",
 						paddingLeft: "5%",
 						paddingRight: "5%",
 						paddingBottom: "40px",
-						width: "100%",
+						
 						margin: "0"
 					}}>
 					<p
@@ -81,7 +82,7 @@ const ProductPage = () => {
 					<Row style={{ marginTop: "15px" }}>
 						{product.variants.map((variant) => {
 							return (
-								<Col style={{ marginTop: "15px" }} xs="6" sm="2">
+								<Col style={{ marginTop: "15px" }} xs="4" sm="2">
 									<div
 										key={variant.id}
 										className="container-box"
