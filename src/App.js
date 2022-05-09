@@ -3,8 +3,9 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
-import Bamboo from "./pages/Bamboo";
+import Shop from "./pages/Shop";
 import ProductPage from "./pages/ProductPage";
+
 
 function App() {
 	return (
@@ -16,8 +17,8 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/products/:handle" element={<ProductPage />} />
 					<Route
-						path="/collections/bamboo-collection"
-						element={<Bamboo />}
+						path="/shop"
+						element={<Shop />}
 					/>
 				</Routes>
 			</Router>

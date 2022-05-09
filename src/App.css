@@ -149,6 +149,7 @@ border-radius: 8px;
 	font-weight: bold;
 	font-size: 1rem;
 	letter-spacing: 3%;
+  margin:0px 20px;
 }
 
 .nav-text:hover{
@@ -221,6 +222,11 @@ border-radius: 8px;
 .container-box:hover .variant-overlay{
   opacity: 1;
   cursor: pointer;
+}
+
+.nav-prop{
+  text-align: start;
+  margin-bottom: 16px;
 }
 
 .App {

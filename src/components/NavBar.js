@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import {
 	Input,
@@ -14,36 +14,62 @@ import {
 	NavbarText
 } from "reactstrap";
 import { ShopContext } from "../context/shopContext";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+
 
 const NavBar = () => {
-
-	const {openCart, openMenu, checkout} = useContext(ShopContext)
+	const { openCart, openMenu, checkout } = useContext(ShopContext);
+	const [ isOpen, setIsOpen ] = useState(false);
 
 	return (
 		<div>
-			<Navbar className="custom-navbar" expand="md" fixed="top" dark>
-				<NavbarBrand href="/"><h3>Forest Green</h3></NavbarBrand>
-				<NavbarToggler onClick={function noRefCheck() {}} />
-				<Collapse navbar>
-					<Nav style={{ width: "75%" }} className="mr-auto" navbar>
-						<NavItem>
-							<Link to="/collections/bamboo-collection" className="nav-text" style={{color:"white"}}>Bamboo Collection</Link>
+			<Navbar style={{zIndex:"3"}} className="custom-navbar" expand="md" fixed="top" dark full light>
+				<NavbarBrand href="/">
+					<h3>Forest Green</h3>
+				</NavbarBrand>
+				<NavbarToggler onClick={ () => setIsOpen(!isOpen)}/>
+				<Collapse isOpen={isOpen} navbar>
+					<Nav style={{ width: "75%" }} className="ml-auto" navbar>
+						<NavItem className="nav-prop">
+							<Link
+								to="/shop"
+								className="nav-text"
+								style={{ color: "white" }}>
+								Shop
+							</Link>
 						</NavItem>
-						<NavItem>
-							<Link to="/collections/home-essentials" className="nav-text" style={{"color":"white"}}>Home Essentials</Link>
+						<NavItem className="nav-prop">
+							<Link
+								to="/collections/home-essentials"
+								className="nav-text"
+								style={{ color: "white" }}>
+								Blog
+							</Link>
 						</NavItem>
-						<NavItem href="">
-							<Link to="/collections/grocery-collection" className="nav-text" style={{"color":"white"}}>Grocery Collection</Link>
+						<NavItem className="nav-prop">
+							<Link
+								to="/collections/grocery-collection"
+								className="nav-text"
+								style={{ color: "white" }}>
+								About Us
+							</Link>
+						</NavItem>
+						<NavItem className="nav-prop">
+							<Link
+								to="/collections/grocery-collection"
+								className="nav-text"
+								style={{ color: "white" }}>
+								FAQ
+							</Link>
 						</NavItem>
 					</Nav>
-					{/* <InputGroup style={{ border: "none", width: "35%" }}>
-						<Input className="search" />
-						<Button className="search-button">Search</Button>
-					</InputGroup> */}
-					<div style={{width:"25%"}}></div>
-					<div style={{ cursor:"pointer"}}>
-					<AiOutlineShoppingCart style={{"marginLeft":"20px", marginRight:"0px"}} size="40px" onClick={() => openCart()}/>
+					<div style={{ width: "25%" }}></div>
+					<div style={{ cursor: "pointer" }}>
+						<AiOutlineShoppingCart
+							style={{ marginLeft: "20px", marginRight: "0px" }}
+							size="40px"
+							onClick={() => openCart()}
+						/>
 					</div>
 				</Collapse>
 			</Navbar>
