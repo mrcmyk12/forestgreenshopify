@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import Logo from "./Logo";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import {
 	Input,
@@ -16,18 +17,24 @@ import {
 import { ShopContext } from "../context/shopContext";
 import { Link } from "react-router-dom";
 
-
 const NavBar = () => {
 	const { openCart, openMenu, checkout } = useContext(ShopContext);
-	const [ isOpen, setIsOpen ] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<div>
-			<Navbar style={{zIndex:"3"}} className="custom-navbar" expand="md" fixed="top" dark full light>
-				<NavbarBrand href="/">
-					<h3>Forest Green</h3>
+			<Navbar
+				style={{ zIndex: "3" }}
+				className="custom-navbar"
+				expand="md"
+				fixed="top"
+				dark
+				full
+				light>
+				<NavbarBrand style={{fontFamily:"EB Garamond", fontSize:"1.75rem", fontWeight:"800"}} href="/">
+					Forest Green					
 				</NavbarBrand>
-				<NavbarToggler onClick={ () => setIsOpen(!isOpen)}/>
+				<NavbarToggler onClick={() => setIsOpen(!isOpen)} />
 				<Collapse isOpen={isOpen} navbar>
 					<Nav style={{ width: "75%" }} className="ml-auto" navbar>
 						<NavItem className="nav-prop">

@@ -4,6 +4,42 @@
 	--brand-forest-grey: #b4bcb0;
 }
 
+
+
+.cls-1{
+  stroke-miterlimit: 10;
+}
+.cls-2{
+  stroke-miterlimit: 10;
+  fill: none;
+  stroke: #fff;
+}
+.cls-3{
+  stroke-miterlimit: 10;
+  stroke: #fff;
+  fill: #fff;
+}
+.cls-4{
+  fill: #fff;
+  font-size: 38px;
+  font-family: "Gastramond", serif;
+}
+.cls-5{
+  letter-spacing: -0.09em;
+}
+.cls-6{
+  letter-spacing: 0.06em;
+}
+.cls-7{
+  fill: #fff;
+}
+.cls-8{
+  stroke-miterlimit: 10;
+  stroke: #fff;
+  fill: #fff;
+  stroke-width: 0.5px;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -226,7 +262,7 @@ border-radius: 8px;
 
 .nav-prop{
   text-align: start;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 }
 
 .App {
