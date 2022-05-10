@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Client from "shopify-buy";
+// import { Blog } from "@shopify/shopify-api/dist/rest-resources/2022-04/index";
+// import Shopify from "@shopify/shopify-api";
 
 const ShopContext = React.createContext();
 
@@ -39,6 +41,17 @@ class ShopProvider extends Component {
 			this.setState({ checkout: checkout });
 		});
 	};
+
+	// fetchBlog = async () => {
+	// 	const test_session = await Shopify.Utils.loadCurrentSession(
+	// 		request,
+	// 		response
+	// 	)
+
+	// 	await Blog.all({
+	// 		session: test_session
+	// 	});
+	// };
 
 	addItemtoCheckout = async (variantId, quantity) => {
 		const lineItemsToAdd = [

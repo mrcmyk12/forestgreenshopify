@@ -24,6 +24,7 @@ const ProductPage = () => {
 	// const starterTitle = product.variants[0].title
 
 	let [image, setImage] = useState();
+	let [price, setPrice] = useState();
 	let [title, setTitle] = useState();
 	let [quantity, setQuantity] = useState(1);
     let [cartProduct, setCartProduct] = useState();
@@ -48,9 +49,9 @@ const ProductPage = () => {
 						width="100%"
 						objectFit="fill"
 					/>
-					<div>
+					{/* <div>
 						<p className="h3" style={{ color: "white"}}>{title}</p>
-					</div>
+					</div> */}
 				</Col>
 				<Col
 					sm="6"
@@ -68,8 +69,26 @@ const ProductPage = () => {
 							color: "white",
 							textAlign: "start"
 						}}
-						className="h2">
+						className="h1">
 						{product.title}
+					</p>
+					<p
+						style={{
+							marginTop: "10%",
+							color: "white",
+							textAlign: "start"
+						}}
+						className="h3">
+						{title}
+					</p>
+					<p
+						style={{
+							marginBottom:"10%",
+							color: "white",
+							textAlign: "start"
+						}}
+						className="h3">
+						{price}
 					</p>
 					<p
 						className="small-text"
@@ -91,6 +110,7 @@ const ProductPage = () => {
 											setImage(variant.image.src);
 											setTitle(variant.title);
                                             setCartProduct(variant.id);
+											setPrice(variant.price)
 										}}>
 										<img
 											className="thumbnail-image"

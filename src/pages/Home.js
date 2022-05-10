@@ -1,23 +1,35 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/shopContext";
-import{Row,Col,Button} from 'reactstrap'
+import { Row, Col, Button } from "reactstrap";
 import Hero from "../components/Hero";
 import { FaMoneyBill, FaTree } from "react-icons/fa";
-import { MdPerson } from "react-icons/md";
-
 
 const Home = () => {
-	const { fetchAllProducts, products, fetchCollections, collections, fetchBambooCollection, bambooCollection } =
-		useContext(ShopContext);
+	const {
+		fetchAllProducts,
+		products,
+		fetchCollections,
+		collections,
+		fetchBambooCollection,
+		bambooCollection
+	} = useContext(ShopContext);
 
 	useEffect(() => {
-		fetchAllProducts(); fetchCollections(); fetchBambooCollection();
-	},[fetchAllProducts, fetchCollections, fetchBambooCollection]);
+		fetchAllProducts();
+		fetchCollections();
+		fetchBambooCollection();
+	}, [fetchAllProducts, fetchCollections, fetchBambooCollection]);
 
-	console.log(products)
-	console.log(bambooCollection)
-	if(!products) return <div><h3 style={{color:"black"}}>We Dont Have Anything</h3></div>
+
+	console.log(products);
+	console.log(bambooCollection);
+	if (!products)
+		return (
+			<div>
+				<h3 style={{ color: "black" }}>We Dont Have Anything</h3>
+			</div>
+		);
 
 	return (
 		<div style={{ display: "flex", height: "100vh", width: "95%" }}>
@@ -47,16 +59,16 @@ const Home = () => {
 					justifyContent: "center"
 				}}>
 				Forest Green
-				<div className="subtitle">Eco-Friendly Products for Conscious Consumers</div>
-				<Link to='/shop'>
-				<Button className="brand-button-primary">
-					Shop Our Collection
-				</Button>
+				<div className="subtitle">
+					Eco-Friendly Products for Conscious Consumers
+				</div>
+				<Link to="/shop">
+					<Button className="brand-button-primary">
+						Shop Our Collection
+					</Button>
 				</Link>
 			</div>
 		</div>
-			
-		
 	);
 };
 
