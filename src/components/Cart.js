@@ -32,7 +32,7 @@ const Cart = () => {
                         </Row>
                         </div>
                     ))) : (<div><h3>Your Cart Is Empty</h3></div>)}
-                    <Row>
+                    <Row style={{marginTop:"25px"}}>
                         <a href={checkout.webUrl}><Button className='brand-button-primary'>Proceed To Checkout</Button></a>
                     </Row>
                 </OffcanvasBody>
