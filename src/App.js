@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import Home from "./pages/Home";
+import FAQ from "./pages/FAQ";
 import Shop from "./pages/Shop";
 import AboutUs from "./pages/AboutUs";
 import ProductPage from "./pages/ProductPage";
@@ -22,6 +23,7 @@ function App() {
 						element={<Shop />}
 					/>
 					<Route path="/about_us" element={<AboutUs />} />
+					<Route path="/faq" element={ <FAQ /> } />
 				</Routes>
 			</Router>
 		</div>

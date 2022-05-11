@@ -63,7 +63,7 @@ const NavBar = () => {
 						</NavItem>
 						<NavItem className="nav-prop">
 							<Link
-								to="/collections/grocery-collection"
+								to="/faq"
 								className="nav-text"
 								style={{ color: "white" }}>
 								FAQ

@@ -12,14 +12,14 @@ const Shop = () => {
 
 	return (
 		<div style={{marginTop:"25vh"}}>
-			<Container>
+			<Row style={{width:"100%", margin:"0", padding:"0"}}>
                 <Row>
                     <h1 className="h1" style={{color:"black"}}>Our Products</h1>
                 </Row>
 				<Row>
 					{products.map((product) => (
 						<Col md="3" style={{margin:"25px 10px"}}>
-							<Link to={`/products/${product.handle}`} key={product.id}>
+							<Link className="link" to={`/products/${product.handle}`} key={product.id}>
 								<Card>
 									<CardImg
 										alt={product.title}
@@ -36,7 +36,7 @@ const Shop = () => {
 						</Col>
 					))}
 				</Row>
-			</Container>
+			</Row>
 		</div>
 	);
 };

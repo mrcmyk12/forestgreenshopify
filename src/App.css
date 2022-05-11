@@ -205,6 +205,10 @@ border-radius: 8px;
   width: 68px;
 }
 
+.accordion-button:active{
+  color: var(--brand-forest-green);
+}
+
 .search:focus{
 /* Forest Green */
 border: 1px solid #5fe20d;
@@ -273,6 +277,10 @@ border-radius: 8px;
 
 .App {
 	text-align: center;
+}
+
+.link:hover{
+  color:var(--brand-forest-green)
 }
 
 

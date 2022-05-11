@@ -65,7 +65,7 @@ const Home = () => {
 				<div className="subtitle" >
 					Eco-Friendly Products for Conscious Consumers
 				</div>
-				<div className="subtitle" style={{fontSize:"1.6rem"}}>
+				<div className="subtitle" style={{fontSize:"1.6rem", marginTop:"20px", fontWeight:"300"}}>
 					Free Shipping On Orders Over $50
 				</div>
 				<Link to="/shop">
