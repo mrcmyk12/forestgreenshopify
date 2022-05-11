@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Logo from "./Logo";
+import logo from '../icons/Forest_Green_White.svg'
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import {
 	Input,
@@ -32,7 +32,7 @@ const NavBar = () => {
 				full
 				light>
 				<NavbarBrand style={{fontFamily:"EB Garamond", fontSize:"1.75rem", fontWeight:"800"}} href="/">
-					Forest Green					
+					<img style={{zIndex:"3", width:"150px"}} src={logo} alt="Forest Green Logo" />			
 				</NavbarBrand>
 				<NavbarToggler onClick={() => setIsOpen(!isOpen)} />
 				<Collapse isOpen={isOpen} navbar>
@@ -55,7 +55,7 @@ const NavBar = () => {
 						</NavItem>
 						<NavItem className="nav-prop">
 							<Link
-								to="/collections/grocery-collection"
+								to="/about_us"
 								className="nav-text"
 								style={{ color: "white" }}>
 								About Us
@@ -67,6 +67,14 @@ const NavBar = () => {
 								className="nav-text"
 								style={{ color: "white" }}>
 								FAQ
+							</Link>
+						</NavItem>
+						<NavItem className="nav-prop">
+							<Link
+								to="/collections/grocery-collection"
+								className="nav-text"
+								style={{ color: "white" }}>
+								Contact Us
 							</Link>
 						</NavItem>
 					</Nav>

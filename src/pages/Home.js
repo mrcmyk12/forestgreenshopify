@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/shopContext";
+import logo from '../icons/Forest_Green_Logo.svg'
 import { Row, Col, Button } from "reactstrap";
 import Hero from "../components/Hero";
 import { FaMoneyBill, FaTree } from "react-icons/fa";
@@ -33,6 +34,7 @@ const Home = () => {
 
 	return (
 		<div style={{ display: "flex", height: "100vh", width: "95%" }}>
+			{/* <img style={{height: "150px", zIndex:"3"}} src={logo} /> */}
 			<img
 				style={{
 					height: "100vh",
@@ -53,14 +55,18 @@ const Home = () => {
 					color: "white",
 					fontSize: "4rem",
 					fontWeight: "900",
+					fontFamily:"Eb Garamond",
 					textAlign: "center",
 					height: "100vh",
-					paddingTop: "25%",
+					paddingTop: "18%",
 					justifyContent: "center"
 				}}>
 				Forest Green
-				<div className="subtitle">
+				<div className="subtitle" >
 					Eco-Friendly Products for Conscious Consumers
+				</div>
+				<div className="subtitle" style={{fontSize:"1.6rem"}}>
+					Free Shipping On Orders Over $50
 				</div>
 				<Link to="/shop">
 					<Button className="brand-button-primary">

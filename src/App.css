@@ -6,7 +6,7 @@
 
 
 
-.cls-1{
+/* .cls-1{
   stroke-miterlimit: 10;
 }
 .cls-2{
@@ -38,7 +38,7 @@
   stroke: #fff;
   fill: #fff;
   stroke-width: 0.5px;
-}
+} */
 
 * {
 	margin: 0;
@@ -149,8 +149,14 @@ h3{
   text-transform: uppercase;
   height: 54px;
   border-radius: 8px;
-  color: var(--brand-forest-black);
+  color: var(--brand-forest-green);
   background: white;
+  border: 1px solid var(--brand-forest-green);
+}
+
+.brand-button-secondary:hover{
+  color:"white";
+  background:var(--brand-forest-green)
 }
 
 .brand-button-primary:hover:focus{
