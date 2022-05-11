@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row, Button } from "reactstrap";
 import logo from '../icons/ForestGreenWhite.svg'
+import pic from "../assets/profile_pic.jpg"
 import { Link } from "react-router-dom";
 
 const AboutUs = () => {
@@ -54,7 +55,7 @@ const AboutUs = () => {
 								marginTop: "20%",
 								objectFit: "contain"
 							}}
-							src="https://philuxwebsite.herokuapp.com/static/media/IMG_3946.8aff9cab.jpg"
+							src={pic}
 						/>
 					</Row>
 				</Col>

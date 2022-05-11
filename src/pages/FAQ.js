@@ -156,6 +156,21 @@ const FAQ = () => {
 								</p>
 							</AccordionBody>
 						</AccordionItem>
+						<AccordionItem>
+							<AccordionHeader targetId="6">
+								<p className="h3">Why is my order taking so long?</p>
+							</AccordionHeader>
+							<AccordionBody accordionId="6">
+								<p className="body" style={{ textAlign: "start" }}>
+									Most of our supplier ship from China. So there
+									may be a delay in your item getting to you. You
+									should have received a tracking number to track the
+									location of your order. If you have any further
+									questions don't hesitate to reach out to us at
+									sales@forestgreenco.com.
+								</p>
+							</AccordionBody>
+						</AccordionItem>
 					</Accordion>
 				</Col>
 				<Col></Col>
