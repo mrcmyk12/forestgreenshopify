@@ -9,13 +9,13 @@ const AboutUs = () => {
 			<Row style={{ width: "100%", margin:"0" }}>
 				<Col md="6" style={{ height: "100vh", margin: "0" }}>
 					<Row style={{ marginTop: "25%" }}>
-						<p className="h1" style={{ color: "black" }}>
+						<p className="h1" style={{ color: "#1f3d0c" }}>
 							About Us...Me
 						</p>
 					</Row>
 					<Row>
 						<p
-							style={{ lineHeight: "160%", padding: "15px 30px" }}
+							style={{ lineHeight: "160%", padding: "15px 30px", color:"#1f3d0c" }}
 							className="body">
 							Hi, my name is Philip. I started Forest Green because I
 							wanted to help solve the World's problem with waste and
@@ -51,7 +51,7 @@ const AboutUs = () => {
                        	<img
 							style={{
 								height: "75vh",
-								marginTop: "25%",
+								marginTop: "20%",
 								objectFit: "contain"
 							}}
 							src="https://philuxwebsite.herokuapp.com/static/media/IMG_3946.8aff9cab.jpg"
