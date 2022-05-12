@@ -16,9 +16,12 @@ const Shop = () => {
                 <Row>
                     <h1 className="h1" style={{color:"black"}}>Our Products</h1>
                 </Row>
+                <Row>
+                    <h1 className="subtitle" style={{color:"black"}}>Free Shipping On Orders Over $50</h1>
+                </Row>
 				<Row>
 					{products.map((product) => (
-						<Col md="3" style={{margin:"25px 10px"}}>
+						<Col  style={{margin:"25px 10px"}}>
 							<Link className="link" to={`/products/${product.handle}`} key={product.id}>
 								<Card>
 									<CardImg
