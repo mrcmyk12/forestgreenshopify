@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
     const { isCartOpen, closeCart, checkout, removeLineItem} = useContext(ShopContext)
-    console.log(checkout)
+    // console.log(checkout)
     return(
         <div>
             <Offcanvas direction="end" isOpen={isCartOpen} onClosed={closeCart}>

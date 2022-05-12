@@ -18,13 +18,12 @@ const Home = () => {
 
 	useEffect(() => {
 		fetchAllProducts();
-		fetchCollections();
-		fetchBambooCollection();
-	}, [fetchAllProducts, fetchCollections, fetchBambooCollection]);
+		
+	}, [fetchAllProducts, fetchCollections]);
 
 
-	console.log(products);
-	console.log(bambooCollection);
+	// console.log(products);
+	// console.log(bambooCollection);
 	if (!products)
 		return (
 			<div>

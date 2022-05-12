@@ -24,7 +24,7 @@ const NavBar = () => {
 	return (
 		<div>
 			<Navbar
-				style={{ zIndex: "3" }}
+				style={{ zIndex: "4" }}
 				className="custom-navbar"
 				expand="md"
 				fixed="top"
@@ -71,7 +71,7 @@ const NavBar = () => {
 						</NavItem>
 						<NavItem className="nav-prop">
 							<Link
-								to="/collections/grocery-collection"
+								to="/contact_us"
 								className="nav-text"
 								style={{ color: "white" }}>
 								Contact Us

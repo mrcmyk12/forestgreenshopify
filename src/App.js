@@ -7,6 +7,7 @@ import FAQ from "./pages/FAQ";
 import Shop from "./pages/Shop";
 import AboutUs from "./pages/AboutUs";
 import ProductPage from "./pages/ProductPage";
+import ContactUs from "./pages/ContactUs";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 					/>
 					<Route path="/about_us" element={<AboutUs />} />
 					<Route path="/faq" element={ <FAQ /> } />
+					<Route path="/contact_us" element={ <ContactUs />}/>
 				</Routes>
 			</Router>
 		</div>

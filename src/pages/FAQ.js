@@ -34,8 +34,8 @@ const FAQ = () => {
 								setItem(targetId);
 							}
 						}}>
-						<AccordionItem>
-							<AccordionHeader targetId="1">
+						<AccordionItem >
+							<AccordionHeader targetId="1" style={{zIndex:"-1"}}>
 								<p className="h3">What is your refund policy?</p>
 							</AccordionHeader>
 							<AccordionBody accordionId="1">
