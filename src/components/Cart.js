@@ -18,7 +18,7 @@ const Cart = () => {
 
 	return (
 		<div>
-			<Offcanvas direction="end" isOpen={isCartOpen} onClosed={closeCart}>
+			<Offcanvas scrollable="true" direction="end" isOpen={isCartOpen} onClosed={closeCart}>
 				<OffcanvasHeader
 					style={{ marginBottom: "0", height: "110px" }}
 					toggle={() => closeCart()}>
@@ -35,12 +35,16 @@ const Cart = () => {
 					{checkout.lineItems?.length ? (
 						checkout.lineItems.map((item) => (
 							<div>
-								<Row style={{marginBottom:"15px"}}>
+								<Row style={{ marginBottom: "15px" }}>
 									<Col>
-										<p style={{fontSize:"1.25rem"}} className="body-bold">{item.title}</p>
+										<p
+											style={{ fontSize: "1.25rem" }}
+											className="body-bold">
+											{item.title}
+										</p>
 									</Col>
 								</Row>
-								<Row>
+								<Row style={{ marginBottom: "25px" }}>
 									<Col sm="2">
 										<AiFillCloseCircle
 											size="30px"
@@ -48,20 +52,22 @@ const Cart = () => {
 											style={{ cursor: "pointer", marginTop: "50%" }}
 										/>
 									</Col>
-									<Col>
-										<p
-											style={{ marginTop: "25%" }}
-											className="body-bold">
-											{item.quantity}
-										</p>
-									</Col>
+									<Col sm="2"></Col>
 									<Col>
 										<img src={item.variant.image.src} />
 									</Col>
 									<Col>
-										<p className="body-bold">{item.variant.price}</p>
+										<Row style={{marginBottom:"10px"}}>
+											<p className="body-bold">
+												Quantity: {item.quantity}
+											</p>
+										</Row>
+										<Row>
+											<p className="body-bold">${item.variant.price}</p>
+										</Row>
 									</Col>
 								</Row>
+								<hr />
 							</div>
 						))
 					) : (
