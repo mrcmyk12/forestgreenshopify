@@ -20,9 +20,8 @@ const ProductPage = () => {
 		fetchProductWithHandle(handle);
 	}, [fetchProductWithHandle, handle]);
 
-	// const starterImage = product.variants[0].image.src
-	// const starterTitle = product.variants[0].title
 
+	
 	let [image, setImage] = useState();
 	let [price, setPrice] = useState();
 	let [title, setTitle] = useState();
@@ -31,7 +30,7 @@ const ProductPage = () => {
 
 	if (!product.title) return <div>Loading...</div>;
 
-	console.log(product.variants);
+	
 
 	return (
 		<div style={{ background: "#050d01" }}>

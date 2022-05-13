@@ -65,7 +65,7 @@ class ShopProvider extends Component {
 			lineItemsToAdd
 		);
 		this.setState({ checkout: checkout });
-
+			console.log(checkout)
 		this.openCart();
 	};
 

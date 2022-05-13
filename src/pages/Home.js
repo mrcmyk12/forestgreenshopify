@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/shopContext";
-import logo from '../icons/Forest_Green_Logo.svg'
+import logo from "../icons/Forest_Green_Logo.svg";
 import { Row, Col, Button } from "reactstrap";
 import Hero from "../components/Hero";
 import { FaMoneyBill, FaTree } from "react-icons/fa";
@@ -18,9 +18,7 @@ const Home = () => {
 
 	useEffect(() => {
 		fetchAllProducts();
-		
 	}, [fetchAllProducts, fetchCollections]);
-
 
 	// console.log(products);
 	// console.log(bambooCollection);
@@ -39,10 +37,12 @@ const Home = () => {
 					height: "100vh",
 					width: "100%",
 					padding: "0",
-					position: "absolute"
+					position: "absolute",
+					objectFit: "cover"
 				}}
 				src="https://images.pexels.com/photos/338936/pexels-photo-338936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 			/>
+
 			<div
 				style={{
 					position: "absolute",
@@ -54,19 +54,25 @@ const Home = () => {
 					color: "white",
 					fontSize: "4rem",
 					fontWeight: "900",
-					fontFamily:"Eb Garamond",
+					fontFamily: "Poppins",
 					textAlign: "center",
 					height: "100vh",
 					paddingTop: "18%",
 					justifyContent: "center"
 				}}>
 				Forest Green
-				<div className="subtitle" >
+				<div style={{ fontSize: "1.25rem" }} className="subtitle">
 					Eco-Friendly Products for Conscious Consumers
 				</div>
-				<div className="subtitle" style={{fontSize:"1.6rem", marginTop:"20px", fontWeight:"300"}}>
+				{/* <div
+					className="subtitle"
+					style={{
+						fontSize: "1.6rem",
+						marginTop: "20px",
+						fontWeight: "300"
+					}}>
 					Free Shipping On Orders Over $50
-				</div>
+				</div> */}
 				<Link to="/shop">
 					<Button className="brand-button-primary">
 						Shop Our Collection
