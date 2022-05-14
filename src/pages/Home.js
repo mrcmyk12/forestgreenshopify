@@ -5,6 +5,7 @@ import logo from "../icons/Forest_Green_Logo.svg";
 import { Row, Col, Button } from "reactstrap";
 import Hero from "../components/Hero";
 import { FaMoneyBill, FaTree } from "react-icons/fa";
+import { blogposts } from "../assets/blogposts";
 
 const Home = () => {
 	const {
@@ -79,6 +80,14 @@ const Home = () => {
 					</Button>
 				</Link>
 			</div>
+			<Row>
+				<Col>
+					<img style={{height:"500px"}} src={blogposts[0].teaserImage} />
+				</Col>
+				<Col>
+				
+				</Col>
+			</Row>
 		</div>
 	);
 };
