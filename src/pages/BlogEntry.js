@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Row, Col, Container } from "reactstrap";
+import logo from "../icons/Forest_Green_Logo.svg";
 
 const BlogEntry = (props) => {
 	const { id } = useParams();
@@ -12,7 +13,6 @@ const BlogEntry = (props) => {
 				src={props.post[id].titleImage}
 			/>
 			<Container>
-               
 				<Row style={{ width: "100%" }}>
 					<Col style={{ width: "100%", margin: "0" }}>
 						<p
@@ -20,7 +20,7 @@ const BlogEntry = (props) => {
 							style={{
 								color: "black",
 								marginTop: "25px",
-								marginBottom: "50px"
+								marginBottom: "50px",
 							}}>
 							{props.post[id].title}
 						</p>
@@ -32,16 +32,27 @@ const BlogEntry = (props) => {
 							<Col style={{ margin: "0" }}>
 								<p
 									className="body"
-									style={{ fontWeight: "300", textAlign: "start" }}>
+									style={{ fontWeight: "300", textAlign: "start", lineHeight:"160%" }}>
 									{text}
 								</p>
 							</Col>
 						</Row>
 					);
 				})}
-				<Row style={{height:"50vh", width:"75%", marginLeft:"12.5%", marginBottom:"25px"}}>
+				<Row
+					style={{
+						height: "50vh",
+						width: "75%",
+						marginLeft: "12.5%",
+						marginBottom: "25px"
+					}}>
 					<img
-						style={{ width: "100%", height:"50vh", objectFit: "cover" }}
+						style={{
+							width: "100%",
+							height: "50vh",
+							objectFit: "cover",
+							borderRadius: "36px"
+						}}
 						src={props.post[id].image1}
 					/>
 				</Row>
@@ -50,15 +61,26 @@ const BlogEntry = (props) => {
 						<Row style={{ marginBottom: "15px" }}>
 							<p
 								className="body"
-								style={{ textAlign: "start", fontWeight: "300" }}>
+								style={{ textAlign: "start", fontWeight: "300", lineHeight:"160%" }}>
 								{text}
 							</p>
 						</Row>
 					);
 				})}
-				<Row style={{height:"50vh", width:"75%", marginLeft:"12.5%", marginBottom:"25px"}}>
+				<Row
+					style={{
+						height: "50vh",
+						width: "75%",
+						marginLeft: "12.5%",
+						marginBottom: "25px"
+					}}>
 					<img
-						style={{ width: "100%", height:"50vh", objectFit: "cover" }}
+						style={{
+							width: "100%",
+							height: "50vh",
+							objectFit: "cover",
+							borderRadius: "36px"
+						}}
 						src={props.post[id].image2}
 					/>
 				</Row>
@@ -67,15 +89,26 @@ const BlogEntry = (props) => {
 						<Row style={{ marginBottom: "15px" }}>
 							<p
 								className="body"
-								style={{ textAlign: "start", fontWeight: "300" }}>
+								style={{ textAlign: "start", fontWeight: "300", lineHeight:"160%" }}>
 								{text}
 							</p>
 						</Row>
 					);
 				})}
-				<Row style={{height:"50vh", width:"75%", marginLeft:"12.5%", marginBottom:"25px"}}>
+				<Row
+					style={{
+						height: "50vh",
+						width: "75%",
+						marginLeft: "12.5%",
+						marginBottom: "25px"
+					}}>
 					<img
-						style={{ width: "100%", height:"50vh", objectFit: "cover" }}
+						style={{
+							width: "100%",
+							height: "50vh",
+							objectFit: "cover",
+							borderRadius: "36px"
+						}}
 						src={props.post[id].image3}
 					/>
 				</Row>
@@ -84,12 +117,23 @@ const BlogEntry = (props) => {
 						<Row style={{ marginBottom: "15px" }}>
 							<p
 								className="body"
-								style={{ textAlign: "start", fontWeight: "300" }}>
+								style={{ textAlign: "start", fontWeight: "300", lineHeight:"160%" }}>
 								{text}
 							</p>
 						</Row>
 					);
 				})}
+				<Row>
+					<Col>
+						<p className="body-bold">
+							Remember...Love the Earth, Love Each Other, And Love
+							Yourself
+						</p>
+					</Col>
+				</Row>
+				<Row>
+					<img style={{ height: "350px", margin: "0" }} src={logo} />
+				</Row>
 			</Container>
 		</div>
 	);
