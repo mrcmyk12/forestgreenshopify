@@ -28,9 +28,13 @@ const ProductPage = () => {
 	let [quantity, setQuantity] = useState(1);
     let [cartProduct, setCartProduct] = useState();
 
+
+
+
 	if (!product.title) return <div>Loading...</div>;
 
-	
+
+	console.log(product)
 
 	return (
 		<div style={{ background: "#050d01" }}>
@@ -44,10 +48,45 @@ const ProductPage = () => {
 				<Col sm="6" style={{ padding: "0" }}>
 					<Image
 						src={image}
-						
 						width="100%"
 						objectFit="fill"
 					/>
+					<Row style={{ marginTop: "15px" }}>
+						{product.variants.map((variant) => {
+							return (
+								<Col style={{ paddingTop: "25px" }} xs="4" sm="2">
+									<div
+										key={variant.id}
+										className="container-box"
+										onClick={() => {
+											setImage(variant.image.src);
+											setTitle(variant.title);
+                                            setCartProduct(variant.id);
+											setPrice(variant.price)
+										}}>
+										<img
+											className="thumbnail-image"
+											style={{paddingTop:"25px"}}
+											src={variant.image.src}
+										/>
+										<div className="variant-overlay"></div>
+									</div>
+								</Col>
+							);
+						})}
+					</Row>
+					{/* <Row>
+						{
+							product.images.map((image) => {
+								
+								return(
+									<div onLoad={setImage(image.src)}>
+									<img src={image.src} className="thumbnail-image" />
+									</div>
+								)
+							})
+						}
+					</Row> */}
 					{/* <div>
 						<p className="h3" style={{ color: "white"}}>{title}</p>
 					</div> */}
@@ -98,30 +137,7 @@ const ProductPage = () => {
 						}}>
 						{product.description}
 					</p>
-					<Row style={{ marginTop: "15px" }}>
-						{product.variants.map((variant) => {
-							return (
-								<Col style={{ paddingTop: "25px" }} xs="4" sm="2">
-									<div
-										key={variant.id}
-										className="container-box"
-										onClick={() => {
-											setImage(variant.image.src);
-											setTitle(variant.title);
-                                            setCartProduct(variant.id);
-											setPrice(variant.price)
-										}}>
-										<img
-											className="thumbnail-image"
-											style={{paddingTop:"25px"}}
-											src={variant.image.src}
-										/>
-										<div className="variant-overlay"></div>
-									</div>
-								</Col>
-							);
-						})}
-					</Row>
+					
 					<Row style={{ marginTop: "40px" }}>
 						<Col>
 							<p style={{ color: "white" }} className="body-bold">

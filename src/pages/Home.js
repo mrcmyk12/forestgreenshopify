@@ -58,7 +58,7 @@ const Home = () => {
 					fontFamily: "Poppins",
 					textAlign: "center",
 					height: "100vh",
-					paddingTop: "18%",
+					paddingTop: "25%",
 					justifyContent: "center"
 				}}>
 				Forest Green

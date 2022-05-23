@@ -53,6 +53,36 @@ const Shop = () => {
 							);
 						}
 					})}
+					<Row style={{marginTop:"3%"}}>
+					<p style={{textAlign:"left"}} className="h2">Home</p>
+				</Row>				
+				<Row>
+					{products.map((product) => {
+						if (product.productType == "Home") {
+							return (
+								<Col md="2" style={{ margin: "25px 10px" }}>
+									<Link
+										className="link"
+										to={`/products/${product.handle}`}
+										key={product.id}>
+										<Card>
+											<CardImg
+												alt={product.title}
+												src={product.images[0].src}
+											/>
+											<CardBody>
+												<p className="body">{product.title}</p>
+												<p className="body-bold">
+													{product.variants[0].price}
+												</p>
+											</CardBody>
+										</Card>
+									</Link>
+								</Col>
+							);
+						}
+					})}
+				</Row>	
 				</Row>
 				<Row style={{marginTop:"3%"}}>
 					<p style={{textAlign:"left"}} className="h2">Health + Beauty</p>
@@ -89,7 +119,7 @@ const Shop = () => {
 				</Row>
 				<Row>
 					{products.map((product) => {
-						if (product.productType == "Kitchen") {
+						if (product.productType === "Kitchen") {
 							return (
 								<Col md="2" style={{ margin: "25px 10px" }}>
 									<Link
@@ -144,36 +174,7 @@ const Shop = () => {
 						}
 					})}
 				</Row>
-				<Row style={{marginTop:"3%"}}>
-					<p style={{textAlign:"left"}} className="h2">Home</p>
-				</Row>				
-				<Row>
-					{products.map((product) => {
-						if (product.productType == "Home") {
-							return (
-								<Col md="2" style={{ margin: "25px 10px" }}>
-									<Link
-										className="link"
-										to={`/products/${product.handle}`}
-										key={product.id}>
-										<Card>
-											<CardImg
-												alt={product.title}
-												src={product.images[0].src}
-											/>
-											<CardBody>
-												<p className="body">{product.title}</p>
-												<p className="body-bold">
-													{product.variants[0].price}
-												</p>
-											</CardBody>
-										</Card>
-									</Link>
-								</Col>
-							);
-						}
-					})}
-				</Row>				
+							
 			</Row>
 		</div>
 	);
