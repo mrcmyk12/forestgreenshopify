@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import logo from '../icons/Forest_Green_White.svg'
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineInstagram } from "react-icons/ai";
 import {
 	Input,
 	Button,
@@ -76,6 +76,14 @@ const NavBar = () => {
 								style={{ color: "white" }}>
 								Contact Us
 							</Link>
+						</NavItem>
+						<NavItem>
+							<a target="_blank" href="https://www.instagram.com/the_forest_green_company/">
+								<AiOutlineInstagram 
+									size="35px"
+									style={{paddingTop:"0"}}
+								/>
+							</a>
 						</NavItem>
 					</Nav>
 					<div style={{ width: "25%" }}></div>
