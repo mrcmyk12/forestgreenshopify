@@ -42,7 +42,7 @@ const Blog = () => {
 								}}>
 								<Col md="3">
 									<img
-										style={{ height: "25vh", borderRadius: "8px" }}
+										style={{ height: "25vh", objectFit:"cover", width:"35vh", borderRadius: "8px" }}
 										src={post.teaserImage}
 									/>
 								</Col>

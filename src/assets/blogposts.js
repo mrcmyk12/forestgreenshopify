@@ -42,4 +42,35 @@ export const blogposts = [
         readTime:"5 minutes",
         subheadline:"View these tips on how to begin your journey towards living a life with minimal waste"
     },
+    {
+        id:1,
+        title:"Your Guide to Home Composting",
+        image1:"https://images.unsplash.com/photo-1585285072892-a52481577926?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387",
+        image2:"https://images.unsplash.com/photo-1587733761376-3f26fc81d17f?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387",
+        image3:"https://images.unsplash.com/photo-1416879595882-3373a0480b5b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870",
+        part1:[
+            "I eat a ton of fruits and vegetables.  However, I always feel guilty about throwing away the scraps.  It adds to my garbage pile and I always feel like there’s a better way to utilize the skin of potatoes, banana peels, and the tops of pineapples.  And although I have a bevy of animals, there’s only so much lettuce my bearded dragon will eat, and only so many unfinished bananas my dogs will eat.",
+            "However, there is an amazing way to dispose of leftover food, not contribute to waste, and also make some amazing soil for your home or community garden.  Behold the power of composting.",
+            "So let’s first talk about things you can compost.  Fruits and veggies are okay to compost.  As are coffee grounds, eggshells, and tea bags.  Also, old flowers and human hair work as well.  However, if you eat meat, be wary of composting meat.  Meat products are likely to attract rodents to your compost pile.  Also, cooked foods, oily things, buttery things, and bones attract rodents to your pile."
+        ],
+        part2:[
+            "Ok, so now that you got your food scraps, we have to figure out a place to compost.  If you live in a house with a backyard, then it’s easy, just start your compost pile in your backyard.  If you live in an apartment like I do, then it’s a bit tougher.  I just put my pile by the front entrance of my apartment.  The entrance to my unit is outdoors, so it works for me.  When things are decomposing and smelly, there is sometimes a complaint from the guest visiting, but I take it in stride.  Other options for apartment dwellers are a balcony, a fire escape (although that might now be legal), or you can just donate your scraps to your community compost heap.",
+            "The container that you store your food scraps for your compost pile, and the container you use for your compost pile don’t have to be fancy.  Although we at Forest Green do offer some accessories for your compost endeavor, there are many things you can use at home in order to start your operation.  You don’t need a fancy container in your  kitchen that says compost, rather you can use an old milk carton to store your scraps.  Or you can even use a reusable bag in your freezer or the back of your fridge.  And you can just use an old trash can for your compost heap, as well as using no container at all and just having a loose compost pile (this works better as a backyard solution as opposed to an apartment solution).",
+            "To make your compost mix, it is relatively simple, you just have to worry about 2 concepts: “browns” and “greens”.  Browns are carbon-rich items such as egg cartons, newspaper, dried leaves, and pine needles.  Be sure to shred the paper before putting it into your pile."
+        ],
+        part3:[
+            "Greens are the food scraps that you have been dutifully storing in your kitchen. Your fruit and vegetables, coffee grounds, and other food scraps.  These items add nitrogen which is crucial for microbial growth.  And micro-organisms are what make composting work.",
+            "The greens that you use are going to typically be wet, and the browns that you use are going to be typically dry.  When you are layering your pile you want the dry browns on the bottom, and the wet greens on the top.  Browns are important because they facilitate aeration which allows water and air to flow.  And with water and air flowing, microorganisms can do their job, and we get decomposition to happen.",
+            "Layering is key to making sure you have a well-functioning compost heap.  You layer your heap with browns then greens, then more browns, then more greens, and so on.  It’s a good idea to make the top layer browns, in order to keep the flies and odors away.  You should attempt to keep each layer only an inch or two high.  The ratio of browns to greens should be 4 parts brown to 1 part green, or you might get away with two parts brown to one part green.  The idea is to have more browns than greens because you want your heap to stay dry(browns), in order to soak up the wet(greens)."
+        ],
+        part4:[
+            "Great.  So now that you got this awesome compost heap going, you now need to tend to it and monitor it.  Your first question might be, how long does it take until I get some great soil out of this heap?  Well it all depends, if it’s hot outside you can get you nitrogen-rich soil in as little as 2 months. If it’s cold outside, it can take at least 6 months.  To keep and manage your heap you will have to turn over your compost at least once every 7 to 10 days.  You can use either a stick or spade to perform this, there are also barrel heaps that allow you to turn it by cranking it.",
+            "You will know that your compost is ready to be used elsewhere, when it has an earthy wooden smell or sometimes a sour smell.  It will be fluffy and earthy, and ready to be put in whatever gardening situation you got going.  If your compost smells bad, it means your pile might not be decomposing, and your pile might be too wet and you will have to adjust your greens to browns ratio.",
+            "And there you go.  You got compost. It’s not too bad and really helps lower your food waste in your household.  Reach out to the community if you have any questions.  As always thanks for reading, and good luck on your composting journey."
+        ],
+        teaserImage:"https://images.pexels.com/photos/5503338/pexels-photo-5503338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        titleImage:"https://images.unsplash.com/photo-1621496654772-c66c48290259?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870",
+        readTime:"8 minutes",
+        subheadline:"Food waste has contributed about 8% to greenhouse gas emissions.  However, composting can help alleviate this waste, and also create beautiful soil for your home gardening operation."
+    }
 ]

@@ -9,7 +9,7 @@ const BlogEntry = (props) => {
 	return (
 		<div style={{ marginTop: "90px", width: "100%" }}>
 			<img
-				style={{ height: "50vh", width: "100%", objectFit: "cover" }}
+				style={{ height: "60vh", width: "100%", objectFit: "cover" }}
 				src={props.post[id].titleImage}
 			/>
 			<Container>
